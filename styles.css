@@ -22,6 +22,12 @@ p {
 
 
 /*Vrager zijn stem*/
+
+.voice1,
+.sound14 {
+    animation: wiggle 1s;
+}
+
 @keyframes wiggle {
     0% {
         transform: translate(1px, 1px) rotate(0deg);
@@ -58,25 +64,25 @@ p {
     }
 }
 
-/*Glow van de tekst voice1 bron: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_glowing_text*/
-@-webkit-keyframes glow {
-  from {
-    text-shadow: 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #1ccf1c, 0 0 10px #1ccf1c, 0 0 10px #1ccf1c, 0 0 10px #1ccf1c, 0 0 10px #1ccf1c;
-  }
 
-  to {
-    text-shadow: 0 0 12px #fff, 0 0 12px #1ccf1c, 0 0 12px #1ccf1c, 0 0 12px #1ccf1c, 0 0 12px #1ccf1c, 0 0 12px #1ccf1c, 0 0 12px #1ccf1c;
-  }
+/*Glow van de tekst voice1 bron: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_glowing_text*/
+
+@-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #1ccf1c, 0 0 10px #1ccf1c, 0 0 10px #1ccf1c, 0 0 10px #1ccf1c, 0 0 10px #1ccf1c;
+    }
+    to {
+        text-shadow: 0 0 12px #fff, 0 0 12px #1ccf1c, 0 0 12px #1ccf1c, 0 0 12px #1ccf1c, 0 0 12px #1ccf1c, 0 0 12px #1ccf1c, 0 0 12px #1ccf1c;
+    }
 }
 
 .voice1 {
     text-shadow: 2px 2px green;
     position: relative;
     left: 5em;
-    animation: wiggle 1s ease-out;
     -webkit-animation: glow 1s ease-in-out infinite alternate;
-  -moz-animation: glow 1s ease-in-out infinite alternate;
-  animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
 }
 
 
@@ -87,7 +93,6 @@ p {
     position: relative;
     right: 10em;
 }
-
 
 
 /*Fuck off skin-job!*/
@@ -101,10 +106,7 @@ p {
     font-family: Brenner Sans Regular;
 }
 
-.captions1 {
-
-}
-
+.captions1 {}
 
 #closed-captions p {
     opacity: 0;
@@ -122,7 +124,6 @@ p {
     transition: .1s;
     opacity: 0;
 }
-
 
 
 /* **********************************************
@@ -246,7 +247,9 @@ You probably want to change the styling.
 
 */
 
+
 /*Wiggle animatie*/
+
 @keyframes wiggle {
     0% {
         transform: translate(1px, 1px) rotate(0deg);
@@ -283,22 +286,25 @@ You probably want to change the styling.
     }
 }
 
+
 /*Rode kleur bij piepgeluid*/
+
 @keyframes colorchange {
-  0% {
-    background: black;
-  }
-  100% {
-    background: darkred;
-  }
+    0% {
+        background: black;
+    }
+    100% {
+        background: darkred;
+    }
 }
+
 @keyframes colorchange {
-  0% {
-    background: black;
-  }
-  100% {
-    background: darkred;
-  }
+    0% {
+        background: black;
+    }
+    100% {
+        background: darkred;
+    }
 }
 
 .sound1 {
@@ -315,14 +321,6 @@ You probably want to change the styling.
     filter: none;
 }
 
-.sound3 {
-    background-color: orangered;
-    filter: brightness(300%);
-    animation: wiggle 1s;
-    animation: colorchange2 1s ease-out;
-}
-
-
 @keyframes wiggle {
     0% {
         transform: translate(1px, 1px) rotate(0deg);
@@ -359,23 +357,30 @@ You probably want to change the styling.
     }
 }
 
-@keyframes colorchange2 {
-  0% {
-    background: black;
-  }
-  100% {
-    background: orangered;
-  }
-}
-@keyframes colorchange2 {
-  0% {
-    background: black;
-  }
-  100% {
-    background: orangered;
-  }
+.sound3 {
+    background-color: orangered;
+    filter: brightness(300%);
+    animation: wiggle 1s;
+    animation: colorchange2 1s ease-out;
 }
 
+@keyframes colorchange2 {
+    0% {
+        background: black;
+    }
+    100% {
+        background: orangered;
+    }
+}
+
+@keyframes colorchange2 {
+    0% {
+        background: black;
+    }
+    100% {
+        background: orangered;
+    }
+}
 
 .sound4 {
     background-color: black;
@@ -393,7 +398,6 @@ You probably want to change the styling.
 .sound8 {
     background-color: black;
     filter: none;
-
 }
 
 .sound11 {
@@ -420,23 +424,30 @@ You probably want to change the styling.
     background-color: #BDC1AC;
 }
 
+
 /*Trilling in vrager zijn stem*/
 
 
 /*hue filter bij dreadfully distinct*/
+
 .sound19 {
-    filter:invert(100);
+    filter: invert(100);
 }
 
+
 /*"dark "dark*/
+
 .sound20 {
     background-color: black;
-    filter:none;
+    filter: none;
 }
+
+
 /*computer van mevrouw scan*/
+
 .sound21 {
     background-color: black;
-    filter:hue-rotate(90deg);
+    filter: hue-rotate(90deg);
 }
 
 .sound22 {
@@ -446,10 +457,12 @@ You probably want to change the styling.
 
 
 /*Vrager tekst naar links*/
+
 .sound14 .voice1 {
     position: relative;
     left: -200px;
 }
+
 
 /*K tekst naar Rechts*/
 
@@ -458,31 +471,27 @@ You probably want to change the styling.
     left: 200px;
 }
 
+
 /*K blur tekst WAAROM PAKT HIJ DIT NIET??*/
-/*
+
 #blur {
-    filter: blur(2px);
-/* animation: text-blur-out 2s;*}
+    animation: text-blur-out 0.5s;
+}
 
-
-
-/*
 @keyframes text-blur-out {
-  0% {
-    filter: blur(0.01);
-            filter: blur(0.01);
-  }
-  100% {
-   filter: blur(12px) opacity(0%);
-            filter: blur(12px) opacity(0%);
-  }
-}*/
+    0% {
+        filter: blur(0);
+        filter: blur(0);
+    }
+    100% {
+        filter: blur(12px) opacity(100%);
+        filter: blur(12px) opacity(100%);
+    }
+}
 
-
-
-
-
+*/
 /*probeer video een border te geven?*/
+
 body .sound0 sound1 #video-placeholder {
     border: red 2em;
 }
