@@ -8,6 +8,7 @@ Feel free to adjust the defaults to your needs.
 
 body {
     background-color: black;
+
 }
 
 p {
@@ -85,9 +86,43 @@ p {
     animation: glow 1s ease-in-out infinite alternate;
 }
 
+/*Vrager tekst naar links*/
 
-/*Joe zijn stem*/
+.voice1.p0 {
+    font-family: brenner mono;
+    font-size: 1.5em;
+}
 
+
+.sound14 .voice1 {
+    position: relative;
+    left: -200px;
+}
+
+
+/*K tekst naar Rechts*/
+@keyframes text-blur-out {
+    from {
+        filter: blur(0);
+    }
+    to {
+        filter: blur(12px);
+    }
+}
+.sound7 .voice2 {
+    position: relative;
+    left: 200px;
+}
+
+.voice2.p9 {
+    animation: text-blur-out 0.5s;
+}
+
+.voice2.p11 {
+    animation: text-blur-out 0.5s;
+}
+
+/*K blur tekst WAAROM PAKT HIJ DIT NIET??*/
 .voice2 {
     font-family: Brenner Sans Condensed;
     position: relative;
@@ -95,18 +130,34 @@ p {
 }
 
 
+@keyframes text-blur-out {
+    0% {
+        filter: blur(0);
+    }
+    100% {
+        filter: blur(12px);
+    }
+}
+
+
+
 /*Fuck off skin-job!*/
 
 .voice3 {
     position: relative;
-    bottom: 12em;
-    right: 7em;
+    bottom: 25em;
+    right: 5em;
     transition: 1.5s ease-out;
-    color: darkred;
+    color: white;
     font-family: Brenner Sans Regular;
+    font-size: 1em;
 }
 
-.captions1 {}
+.voice3.p6.off {
+    transition-timing-function: ease-out;
+
+}
+
 
 #closed-captions p {
     opacity: 0;
@@ -143,13 +194,14 @@ You probably want to change the styling.
 
 .p0 span {
     opacity: 0;
-    font-family: "brenner mon";
+    font-family: "brenner mono";
 }
 
 .p0.on span:first-of-type {
     opacity: 1;
     transition: 0s;
     font-weight: 200;
+    font-family: "brenner mono";
 }
 
 .p0.on span:nth-of-type(2) {
@@ -157,6 +209,7 @@ You probably want to change the styling.
     transition: 0s .4s;
     margin-right: -.25em;
     font-weight: 400;
+    font-family: "brenner mono";
 }
 
 .p0.on span:nth-of-type(3) {
@@ -164,6 +217,7 @@ You probably want to change the styling.
     transition: 0s .5s;
     margin-right: -.25em;
     font-weight: 600;
+    font-family: "brenner mono";
 }
 
 .p0.on span:nth-of-type(4) {
@@ -171,40 +225,40 @@ You probably want to change the styling.
     transition: 0s .7s;
     margin-right: -.25em;
     font-weight: 800;
-    font-family: "brenner mon";
+    font-family: "brenner mono";
 }
 
 .p0.on span:nth-of-type(5) {
     opacity: 1;
     transition: 0s 1.1s;
     margin-right: -.25em;
-    font-family: "brenner mon";
+    font-family: "brenner mono";
 }
 
 .p0.on span:nth-of-type(6) {
     opacity: 1;
     transition: 0s 1.4s;
     margin-right: -.25em;
-    font-family: "brenner mon";
+    font-family: "brenner mono";
 }
 
 .p0.on span:nth-of-type(7) {
     opacity: 1;
     transition: 0s 1.7s;
     margin-right: -.25em;
-    font-family: "brenner script";
+    font-family: "brenner mono";
 }
 
 .p0.on span:nth-of-type(8) {
     opacity: 1;
     transition: 0s 2s;
-    font-family: "brenner script";
+    font-family: "brenner mono";
 }
 
 .p0.on span:nth-of-type(9) {
     opacity: 1;
     transition: 0s 3s;
-    font-family: "brenner Sans condensed";
+    font-family: "brenner mono";
 }
 
 .p0.on span:nth-of-type(10) {
@@ -216,7 +270,7 @@ You probably want to change the styling.
 .p0.on span:nth-of-type(11) {
     opacity: 1;
     transition: 0s 3.7s;
-    font-family: "brenner slab";
+    font-family: "brenner mono";
 }
 
 
@@ -247,54 +301,18 @@ You probably want to change the styling.
 
 */
 
-
-/*Wiggle animatie*/
-
-@keyframes wiggle {
-    0% {
-        transform: translate(1px, 1px) rotate(0deg);
-    }
-    10% {
-        transform: translate(-1px, -2px) rotate(-1deg);
-    }
-    20% {
-        transform: translate(-3px, 0px) rotate(1deg);
-    }
-    30% {
-        transform: translate(3px, 2px) rotate(0deg);
-    }
-    40% {
-        transform: translate(1px, -1px) rotate(1deg);
-    }
-    50% {
-        transform: translate(-1px, 2px) rotate(-1deg);
-    }
-    60% {
-        transform: translate(-3px, 1px) rotate(0deg);
-    }
-    70% {
-        transform: translate(3px, 1px) rotate(-1deg);
-    }
-    80% {
-        transform: translate(-1px, -1px) rotate(1deg);
-    }
-    90% {
-        transform: translate(1px, 2px) rotate(0deg);
-    }
-    100% {
-        transform: translate(1px, -2px) rotate(-1deg);
-    }
-}
-
-
 /*Rode kleur bij piepgeluid*/
 
 @keyframes colorchange {
     0% {
         background: black;
     }
-    100% {
+    50% {
         background: darkred;
+    }
+
+    50% {
+        background: black;
     }
 }
 
@@ -307,13 +325,53 @@ You probably want to change the styling.
     }
 }
 
-.sound1 {
-    background-color: darkred;
+/*BAss music omschrijving*/
+
+
+.sound0 #closed-captions:before{
+    content: "[Exciting bass music]";
+    color: white;
+    width: 4em;
+    animation: fadeOut 5s forwards;
+    font-family: brenner light italic;
+    position: relative;
+    bottom: 6em;
+    left: 40em;
+}
+
+/*
+.sound1 #closed-captions:before{
+    content: "[Alarming sounds]";
+    animation: fadeOut 5s forwards;
+    color: white;
+    width: 10em;
+    font-family: brenner light italic;
+    position: relative;
+    bottom: 6em;
+    left: 40em;
+}*/
+
+
+.sound1, .sound1 #closed-captions:before {
+    content: "[Alarming sounds]";
+    animation: fadeOut 5s forwards;
     background-blend-mode: color-burn;
     box-shadow: red;
     filter: brightness(300%);
     animation: wiggle 1s ease;
     animation: colorchange 1s ease-out;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    99% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 .sound2 {
@@ -364,12 +422,39 @@ You probably want to change the styling.
     animation: colorchange2 1s ease-out;
 }
 
-@keyframes colorchange2 {
+@keyframes wiggle {
     0% {
-        background: black;
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
     }
     100% {
-        background: orangered;
+        transform: translate(1px, -2px) rotate(-1deg);
     }
 }
 
@@ -377,10 +462,15 @@ You probably want to change the styling.
     0% {
         background: black;
     }
-    100% {
+    50% {
         background: orangered;
     }
+
+    100% {
+        background: black;
+    }
 }
+
 
 .sound4 {
     background-color: black;
@@ -390,29 +480,63 @@ You probably want to change the styling.
 
 /*Invert filter bij piepscangeluidjes*/
 
-.sound7 {
-    filter: invert(100%);
-    background-color: white;
+/*
+.sound7 #closed-captions:before {
+    content: "[Laser machine scan sounds]";
+    color: black;
+    animation: fadeOut 2s forwards;
 }
+*/
+
+.sound7, .sound7 #closed-captions:before
+
+{
+    content: "[Laser machine scan sounds]";
+    color: black;
+    animation: fadeOut 2s forwards;
+    filter: invert(100%);
+
+}
+
 
 .sound8 {
     background-color: black;
     filter: none;
 }
 
-.sound11 {
+.sound11, .sound11 #closed-captions:before {
+    content: "[Laser machine scan sounds]";
+    color: black;
+    animation: fadeOut 2s forwards;
     filter: invert(100%);
     background-color: white;
 }
+
 
 .sound12 {
     background-color: black;
     filter: none;
 }
 
-.sound14 {
+
+.sound14, .sound14 #closed-captions:before {
+    content: "[Laser machine scan sounds]";
+    color: black;
+    animation: fadeOut 2s forwards;
     background-color: white;
     filter: invert(100%);
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    99% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 .sound15 {
@@ -456,40 +580,9 @@ You probably want to change the styling.
 }
 
 
-/*Vrager tekst naar links*/
-
-.sound14 .voice1 {
-    position: relative;
-    left: -200px;
-}
 
 
-/*K tekst naar Rechts*/
 
-.sound7 .voice2 {
-    position: relative;
-    left: 200px;
-}
-
-
-/*K blur tekst WAAROM PAKT HIJ DIT NIET??*/
-
-#blur {
-    animation: text-blur-out 0.5s;
-}
-
-@keyframes text-blur-out {
-    0% {
-        filter: blur(0);
-        filter: blur(0);
-    }
-    100% {
-        filter: blur(12px) opacity(100%);
-        filter: blur(12px) opacity(100%);
-    }
-}
-
-*/
 /*probeer video een border te geven?*/
 
 body .sound0 sound1 #video-placeholder {
