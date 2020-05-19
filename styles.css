@@ -297,9 +297,9 @@ You probably want to change the styling.
     left: 40em;
 }
 
-.sound0 #video-placeholder {
-    background-color: 20px #96E0E2;
-}
+
+
+
 
 /*
 .sound1 #closed-captions:before{
@@ -433,6 +433,23 @@ You probably want to change the styling.
 
 }
 
+.Machinelasersound {
+    display: none;
+}
+
+.sound11 .Machinelasersound {
+    display: block;
+/*    opacity: 1;*/
+/*    animation-name: fadeInOpacity;*/
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation: fadeInOpacity 4.5s forwards;
+    color: black;
+    position: relative;
+    bottom: 10em;
+
+}
+
 .sound11 #closed-captions:before {
     content: "[Laser machine scan sounds]";
     color: white;
@@ -524,6 +541,7 @@ You probably want to change the styling.
 }
 
 
+
 /*computer van mevrouw scan*/
 
 .sound21 {
@@ -539,27 +557,86 @@ You probably want to change the styling.
 
 
 /*three times withtin cells interlinked*/
+/*
+.voice1.p40 {
+    animation: wiggle 1s ease;
+*/
+
+@keyframes wiggle {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+.voice2.p41 {
+    position: relative;
+    bottom: 4em;
+    animation: fadeOut ease 1s;
+}
 
 .voice2.p42 {
     position: relative;
-    bottom: 3em;
+    bottom: 3.5em;
 }
 
 .voice2.p43 {
     position: relative;
-    bottom: 2em;
+    bottom: 3em;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    99% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 .voice4 {
     font-family: brenner regular;
     font-size: 1.5em;
     position: relative;
-    bottom: 10em;
+    bottom: 13em;
 }
 
 /*You're not even close to baseline*/
 .voice1.p79 {
     left: 0.5em;
+    bottom: 12em;
 }
 
 /*probeer video een border te geven?*/
