@@ -22,58 +22,15 @@ p {
 }
 
 
-/*Vrager zijn stem*/
-
-.voice1,
-.sound14 {
-    animation: wiggle 1s;
-}
-
-@keyframes wiggle {
-    0% {
-        transform: translate(1px, 1px) rotate(0deg);
-    }
-    10% {
-        transform: translate(-1px, -2px) rotate(-1deg);
-    }
-    20% {
-        transform: translate(-3px, 0px) rotate(1deg);
-    }
-    30% {
-        transform: translate(3px, 2px) rotate(0deg);
-    }
-    40% {
-        transform: translate(1px, -1px) rotate(1deg);
-    }
-    50% {
-        transform: translate(-1px, 2px) rotate(-1deg);
-    }
-    60% {
-        transform: translate(-3px, 1px) rotate(0deg);
-    }
-    70% {
-        transform: translate(3px, 1px) rotate(-1deg);
-    }
-    80% {
-        transform: translate(-1px, -1px) rotate(1deg);
-    }
-    90% {
-        transform: translate(1px, 2px) rotate(0deg);
-    }
-    100% {
-        transform: translate(1px, -2px) rotate(-1deg);
-    }
-}
-
 
 /*Glow van de tekst voice1 bron: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_glowing_text*/
 
 @-webkit-keyframes glow {
     from {
-        text-shadow: 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #1ccf1c, 0 0 10px #1ccf1c, 0 0 10px #1ccf1c, 0 0 10px #1ccf1c, 0 0 10px #1ccf1c;
+        text-shadow: 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #96E0E2, 0 0 10px #96E0E2, 0 0 10px #96E0E2, 0 0 10px #96E0E2, 0 0 10px #96E0E2;
     }
     to {
-        text-shadow: 0 0 12px #fff, 0 0 12px #1ccf1c, 0 0 12px #1ccf1c, 0 0 12px #1ccf1c, 0 0 12px #1ccf1c, 0 0 12px #1ccf1c, 0 0 12px #1ccf1c;
+        text-shadow: 0 0 12px #fff, 0 0 12px #96E0E2, 0 0 12px #96E0E2, 0 0 12px #96E0E2, 0 0 12px #96E0E2, 0 0 12px #96E0E2, 0 0 12px #96E0E2;
     }
 }
 
@@ -101,6 +58,19 @@ p {
 
 
 /*K tekst naar Rechts*/
+.sound7 .voice2 {
+    position: relative;
+    left: 200px;
+}
+
+.voice2.p9 {
+    animation: text-blur-out 0.5s ease;
+}
+
+.voice2.p11 {
+    animation: text-blur-out 0.5s ease;
+}
+
 @keyframes text-blur-out {
     from {
         filter: blur(0);
@@ -108,18 +78,6 @@ p {
     to {
         filter: blur(12px);
     }
-}
-.sound7 .voice2 {
-    position: relative;
-    left: 200px;
-}
-
-.voice2.p9 {
-    animation: text-blur-out 0.5s;
-}
-
-.voice2.p11 {
-    animation: text-blur-out 0.5s;
 }
 
 /*K blur tekst WAAROM PAKT HIJ DIT NIET??*/
@@ -339,6 +297,10 @@ You probably want to change the styling.
     left: 40em;
 }
 
+.sound0 #video-placeholder {
+    background-color: 20px #96E0E2;
+}
+
 /*
 .sound1 #closed-captions:before{
     content: "[Alarming sounds]";
@@ -379,41 +341,6 @@ You probably want to change the styling.
     filter: none;
 }
 
-@keyframes wiggle {
-    0% {
-        transform: translate(1px, 1px) rotate(0deg);
-    }
-    10% {
-        transform: translate(-1px, -2px) rotate(-1deg);
-    }
-    20% {
-        transform: translate(-3px, 0px) rotate(1deg);
-    }
-    30% {
-        transform: translate(3px, 2px) rotate(0deg);
-    }
-    40% {
-        transform: translate(1px, -1px) rotate(1deg);
-    }
-    50% {
-        transform: translate(-1px, 2px) rotate(-1deg);
-    }
-    60% {
-        transform: translate(-3px, 1px) rotate(0deg);
-    }
-    70% {
-        transform: translate(3px, 1px) rotate(-1deg);
-    }
-    80% {
-        transform: translate(-1px, -1px) rotate(1deg);
-    }
-    90% {
-        transform: translate(1px, 2px) rotate(0deg);
-    }
-    100% {
-        transform: translate(1px, -2px) rotate(-1deg);
-    }
-}
 
 .sound3 {
     background-color: orangered;
@@ -479,23 +406,18 @@ You probably want to change the styling.
 
 
 /*Invert filter bij piepscangeluidjes*/
+/*scan1 geluid 0.17*/
+.sound7
+{    filter: invert(100%);
+    background-color: white;
 
-/*
-.sound7 #closed-captions:before {
-    content: "[Laser machine scan sounds]";
-    color: black;
-    animation: fadeOut 2s forwards;
 }
-*/
 
-.sound7, .sound7 #closed-captions:before
-
+.sound7 #closed-captions:before
 {
     content: "[Laser machine scan sounds]";
-    color: black;
+    color: white;
     animation: fadeOut 2s forwards;
-    filter: invert(100%);
-
 }
 
 
@@ -504,27 +426,36 @@ You probably want to change the styling.
     filter: none;
 }
 
-.sound11, .sound11 #closed-captions:before {
-    content: "[Laser machine scan sounds]";
-    color: black;
-    animation: fadeOut 2s forwards;
+/*scan2 geluid*/
+.sound11 {
     filter: invert(100%);
     background-color: white;
+
 }
 
+.sound11 #closed-captions:before {
+    content: "[Laser machine scan sounds]";
+    color: white;
+    animation: fadeOut 2s forwards;
 
+}
+
+/*scan3 geluid*/
 .sound12 {
     background-color: black;
     filter: none;
 }
 
-
-.sound14, .sound14 #closed-captions:before {
-    content: "[Laser machine scan sounds]";
-    color: black;
-    animation: fadeOut 2s forwards;
+.sound14 {
     background-color: white;
     filter: invert(100%);
+
+}
+
+.sound14 #closed-captions:before {
+    content: "[Laser machine scan sounds]";
+    color: white;
+    animation: fadeOut 2s forwards;
 }
 
 @keyframes fadeOut {
@@ -539,14 +470,36 @@ You probably want to change the styling.
     }
 }
 
+/*0.33*/
 .sound15 {
     background-color: black;
     filter: none;
 }
 
+.sound15 #video-placeholder {
+    animation: zoomin 42s;
+
+}
+
 .sound18 {
     background-color: #BDC1AC;
 }
+
+.sound19 #video-placeholder {
+    animation: zoomin 10s ease;
+}
+
+@keyframes zoomin {
+
+   0 {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.5);
+    }
+}
+
 
 
 /*Trilling in vrager zijn stem*/
@@ -554,16 +507,20 @@ You probably want to change the styling.
 
 /*hue filter bij dreadfully distinct*/
 
-.sound19 {
-    filter: invert(100);
-}
 
 
 /*"dark "dark*/
 
-.sound20 {
+.sound21 {
     background-color: black;
     filter: none;
+}
+
+.sound21 #closed-captions:before{
+    content: "[Intens threatening music]";
+    color: black;
+
+
 }
 
 
@@ -581,7 +538,29 @@ You probably want to change the styling.
 
 
 
+/*three times withtin cells interlinked*/
 
+.voice2.p42 {
+    position: relative;
+    bottom: 3em;
+}
+
+.voice2.p43 {
+    position: relative;
+    bottom: 2em;
+}
+
+.voice4 {
+    font-family: brenner regular;
+    font-size: 1.5em;
+    position: relative;
+    bottom: 10em;
+}
+
+/*You're not even close to baseline*/
+.voice1.p79 {
+    left: 0.5em;
+}
 
 /*probeer video een border te geven?*/
 
