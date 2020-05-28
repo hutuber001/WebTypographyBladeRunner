@@ -324,7 +324,7 @@ You probably want to change the styling.
 
 .sound1, .sound1 #closed-captions:before {
     content: "[Alarming sounds]";
-    animation: fadeOut 5s forwards;
+    animation: fadeOut 2s ease-out;
     background-blend-mode: color-burn;
     box-shadow: red;
     filter: brightness(300%);
@@ -349,6 +349,9 @@ You probably want to change the styling.
     filter: none;
 }
 
+.sound4 #closed-captions:before {
+    opacity: 0;
+}
 
 .sound3 {
     background-color: orangered;
@@ -421,15 +424,18 @@ You probably want to change the styling.
 
 }
 
+
 .sound7 #closed-captions:before
 
 {
     content: "[Laser machine scan sounds]";
     color: white;
-    animation: fadeOut 2s forwards;
+    animation: fadeOut 2s ease;
 }
 
-
+.sound8 #closed-captions:before {
+    opacity: 0;
+}
 .sound8 {
     background-color: black;
     filter: none;
@@ -449,6 +455,7 @@ You probably want to change the styling.
     color: white;
     font-size: 1em;
     position: relative;
+    left: 20em;
     bottom: 6em;
 }
 
