@@ -9,6 +9,7 @@ Feel free to adjust the defaults to your needs.
 body {
     background-color: black;
 
+
 }
 
 p {
@@ -17,14 +18,13 @@ p {
 }
 
 #video-placeholder {
-    width: 100%;
     margin-top: 5em;
+    margin-left: 25em;
 }
 
 
 
 /*Glow van de tekst voice1 bron: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_glowing_text*/
-
 @-webkit-keyframes glow {
     from {
         text-shadow: 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #96E0E2, 0 0 10px #96E0E2, 0 0 10px #96E0E2, 0 0 10px #96E0E2, 0 0 10px #96E0E2;
@@ -63,22 +63,7 @@ p {
     left: 200px;
 }
 
-.voice2.p9 {
-    animation: text-blur-out 0.5s ease;
-}
 
-.voice2.p11 {
-    animation: text-blur-out 0.5s ease;
-}
-
-@keyframes text-blur-out {
-    from {
-        filter: blur(0);
-    }
-    to {
-        filter: blur(12px);
-    }
-}
 
 /*K blur tekst WAAROM PAKT HIJ DIT NIET??*/
 .voice2 {
@@ -287,7 +272,7 @@ You probably want to change the styling.
 
 
 .sound0 #closed-captions:before{
-    content: "[Exciting bass music]";
+    content: "[Theatening bass music]";
     color: white;
     width: 4em;
     animation: fadeOut 5s forwards;
@@ -312,6 +297,29 @@ You probably want to change the styling.
     bottom: 6em;
     left: 40em;
 }*/
+
+/*"dark "dark*/
+
+ .sound0 {
+    background: linear-gradient(100deg, black, #420707, black, black);
+    background-size: 200% 200%;
+    animation: gradient1 5s ease infinite;
+}
+
+
+@keyframes gradient1 {
+
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 
 
 .sound1, .sound1 #closed-captions:before {
@@ -414,6 +422,7 @@ You probably want to change the styling.
 }
 
 .sound7 #closed-captions:before
+
 {
     content: "[Laser machine scan sounds]";
     color: white;
@@ -429,18 +438,41 @@ You probably want to change the styling.
 /*scan2 geluid*/
 .sound11 {
     filter: invert(100%);
-    background-color: white;
+    background-color: white; }
 
+.textSound11 {
+    position: absolute;
+    opacity: 0;
 }
 
+.sound11 .textSound11 {
+    color: white;
+    font-size: 1em;
+    position: relative;
+    bottom: 6em;
+}
+
+
+/*
+.sound11 #closed-captions:before {
+    content: "[Laser machine scan sounds]";
+    color: white;
+}
+
+.sound11 {
+    filter: invert(100%);
+    background-color: white;
+
+} */
+/*
 .Machinelasersound {
     display: none;
 }
 
 .sound11 .Machinelasersound {
     display: block;
-/*    opacity: 1;*/
-/*    animation-name: fadeInOpacity;*/
+opacity: 1;
+animation-name: fadeInOpacity;
     animation-iteration-count: 1;
     animation-timing-function: ease-in-out;
     animation: fadeInOpacity 4.5s forwards;
@@ -448,14 +480,7 @@ You probably want to change the styling.
     position: relative;
     bottom: 10em;
 
-}
-
-.sound11 #closed-captions:before {
-    content: "[Laser machine scan sounds]";
-    color: white;
-    animation: fadeOut 2s forwards;
-
-}
+} */
 
 /*scan3 geluid*/
 .sound12 {
@@ -469,10 +494,43 @@ You probably want to change the styling.
 
 }
 
-.sound14 #closed-captions:before {
-    content: "[Laser machine scan sounds]";
+.textSound14 {
+    position: absolute;
+    opacity: 0;
+}
+
+.sound14 .textSound14 {
+    opacity: 100%:
     color: white;
-    animation: fadeOut 2s forwards;
+    font-size: 1em;
+    position: relative;
+    bottom: 6em;
+    animation: fadeOut 2s ease;
+}
+
+/*0.33*/
+.sound15  {
+    color: white;
+    background-color: black;
+    filter: none;
+}
+
+.textSound15 {
+    position: absolute;
+    opacity: 0;
+}
+
+.sound15 .textSound15 {
+    content: "[Intens peepppp sounds]";
+    color: white;
+    font-size: 1em;
+    position: relative;
+    bottom: 18em;
+}
+
+.sound15 #video-placeholder {
+    animation: zoomin 42s;
+
 }
 
 @keyframes fadeOut {
@@ -486,17 +544,19 @@ You probably want to change the styling.
         opacity: 0;
     }
 }
-
-/*0.33*/
-.sound15 {
-    background-color: black;
-    filter: none;
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    99% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
-.sound15 #video-placeholder {
-    animation: zoomin 42s;
 
-}
 
 .sound18 {
     background-color: #BDC1AC;
@@ -526,13 +586,6 @@ You probably want to change the styling.
 
 
 
-/*"dark "dark*/
-
-.sound21 {
-    background-color: black;
-    filter: none;
-}
-
 .sound21 #closed-captions:before{
     content: "[Intens threatening music]";
     color: black;
@@ -555,6 +608,33 @@ You probably want to change the styling.
 }
 
 
+.sound19 {
+    background: linear-gradient(135deg, #16728e, #16728e, black, black);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+}
+
+/*"dark "dark*/
+.sound21 {
+    background: linear-gradient(135deg, black, #16728e, black, black);
+    background-size: 200% 200%;
+    animation: gradient 4s ease infinite;
+
+}
+
+
+@keyframes gradient {
+
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
 
 /*three times withtin cells interlinked*/
 /*
@@ -648,3 +728,4 @@ body .sound0 sound1 #video-placeholder {
 3.8 {
     font-family: Brenner Mono Regular;
 }
+
