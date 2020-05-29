@@ -50,22 +50,12 @@ p {
     font-size: 1.5em;
 }
 
-
-.sound14 .voice1 {
-    position: relative;
-    left: -200px;
-}
-
-
 /*K tekst naar Rechts*/
 .sound7 .voice2 {
     position: relative;
     left: 200px;
 }
 
-
-
-/*K blur tekst WAAROM PAKT HIJ DIT NIET??*/
 .voice2 {
     font-family: Brenner Sans Condensed;
     position: relative;
@@ -81,8 +71,6 @@ p {
         filter: blur(12px);
     }
 }
-
-
 
 /*Fuck off skin-job!*/
 
@@ -128,10 +116,6 @@ The first paragraph, with extended timing for
     spoken.
 You probably want to change the styling.
 ********************************************** */
-
-
-/*elke p staat voor paragraaf*/
-
 
 /*elke span is een woord*/
 
@@ -217,33 +201,6 @@ You probably want to change the styling.
 }
 
 
-/*Animatie tijden bepaalde secondes van de film*/
-
-
-/*.body .sound0 .bg-pan-top {
-    -webkit-animation: bg-pan-top 8s both;
-            animation: bg-pan-top 8s both;
-}
-
-@-webkit-keyframes bg-pan-top {
-  0% {
-    background-position: 50% 100%;
-  }
-  100% {
-    background-position: 50% 0%;
-  }
-}
-@keyframes bg-pan-top {
-  0% {
-    background-position: 50% 100%;
-  }
-  100% {
-    background-position: 50% 0%;
-  }
-}
-
-*/
-
 /*Rode kleur bij piepgeluid*/
 
 @keyframes colorchange {
@@ -272,7 +229,7 @@ You probably want to change the styling.
 
 
 .sound0 #closed-captions:before{
-    content: "[Theatening bass music]";
+    content: "[Threatening bass music]";
     color: white;
     width: 4em;
     animation: fadeOut 5s forwards;
@@ -282,23 +239,7 @@ You probably want to change the styling.
     left: 40em;
 }
 
-
-
-
-
-/*
-.sound1 #closed-captions:before{
-    content: "[Alarming sounds]";
-    animation: fadeOut 5s forwards;
-    color: white;
-    width: 10em;
-    font-family: brenner light italic;
-    position: relative;
-    bottom: 6em;
-    left: 40em;
-}*/
-
-/*"dark "dark*/
+/*achtergrond kleur aan t begin*/
 
  .sound0 {
     background: linear-gradient(100deg, black, #420707, black, black);
@@ -419,6 +360,7 @@ You probably want to change the styling.
 /*Invert filter bij piepscangeluidjes*/
 /*scan1 geluid 0.17*/
 .sound7
+
 {    filter: invert(100%);
     background-color: white;
 
@@ -442,52 +384,30 @@ You probably want to change the styling.
 }
 
 /*scan2 geluid*/
-.sound11 {
-    filter: invert(100%);
-    background-color: white; }
-
-.textSound11 {
-    position: absolute;
+.sound0 .textSound11 {
+    opacity: 0;
+}
+.sound1 .textSound11 {
     opacity: 0;
 }
 
-.sound11 .textSound11 {
-    color: white;
-    font-size: 1em;
-    position: relative;
-    left: 20em;
-    bottom: 6em;
-}
-
-
-/*
-.sound11 #closed-captions:before {
-    content: "[Laser machine scan sounds]";
-    color: white;
+.sound2 .textSound11 {
+    opacity: 0;
 }
 
 .sound11 {
     filter: invert(100%);
     background-color: white;
-
-} */
-/*
-.Machinelasersound {
-    display: none;
 }
 
-.sound11 .Machinelasersound {
-    display: block;
-opacity: 1;
-animation-name: fadeInOpacity;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in-out;
-    animation: fadeInOpacity 4.5s forwards;
-    color: black;
+.sound11 .textSound11 {
+    font-family: brenner light italic;
+    opacity: 1;
     position: relative;
-    bottom: 10em;
-
-} */
+    left: 37em;
+    top: -7em;
+    color: white;
+}
 
 /*scan3 geluid*/
 .sound12 {
@@ -522,6 +442,40 @@ animation-name: fadeInOpacity;
     filter: none;
 }
 
+.sound15 .textSound11 {
+    opacity: 0;
+}
+.sound1 .textSound15 {
+    opacity: 0;
+}
+.sound11 .textSound15 {
+    opacity: 0;
+}
+.sound15 .textSound15 {
+    opacity: 1;
+    color: white;
+    font-family: brenner light italic;
+    position: relative;
+    font-size: 1em;
+    z-index: 5;
+    animation: zoomin 42s ease;
+
+}
+
+.sound15 #video-placeholder {
+    animation: zoomin 42s;
+    z-index: 0;
+
+}
+
+
+.sound18 .textSound15 {
+    opacity: 0;
+}
+
+
+
+/*
 .textSound15 {
     position: absolute;
     opacity: 0;
@@ -533,12 +487,8 @@ animation-name: fadeInOpacity;
     font-size: 1em;
     position: relative;
     bottom: 18em;
-}
+*/
 
-.sound15 #video-placeholder {
-    animation: zoomin 42s;
-
-}
 
 @keyframes fadeOut {
     0% {
@@ -563,10 +513,42 @@ animation-name: fadeInOpacity;
     }
 }
 
+/*Silence sound*/
+.sound0 .textSound18 {
+    opacity: 0;
+}
+.sound1 .textSound18 {
+    opacity: 0;
+}
 
+.sound2 .textSound18 {
+    opacity: 0;
+}
 
+.sound14 .textSound18 {
+    opacity: 0;
+}
+
+.sound15 .textSound18 {
+    opacity: 0;
+}
+
+.sound18 .textSound18 {
+    opacity: 1;
+    font-family: brenner light italic;
+    position: relative;
+    left: 39em;
+    top: -7em;
+    color: white;
+    font-size: 1em;
+
+}
 .sound18 {
     background-color: #BDC1AC;
+}
+
+.sound19 .textSound18 {
+    opacity: 0;
 }
 
 .sound19 #video-placeholder {
@@ -589,16 +571,56 @@ animation-name: fadeInOpacity;
 /*Trilling in vrager zijn stem*/
 
 
-/*hue filter bij dreadfully distinct*/
+/*SCENE 2*/
+.sound0 .textSound19 {
+    opacity: 0;
+}
+
+.sound0 .textSound15 {
+    opacity: 0;
+}
+
+.sound1 .textSound19 {
+    opacity: 0;
+}
+
+.sound1 .textSound15 {
+    opacity: 0;
+}
+.sound18 .textSound19 {
+    opacity: 0;
+}
+
+.sound15 .textSound19 {
+    opacity: 0;
+}
+
+.sound14 .textSound19 {
+    opacity: 0;
+}
 
 
+
+.sound19 {
+    background: linear-gradient(135deg, #16728e, #16728e, black, black);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+}
+
+.sound19 .textSound19 {
+    font-family: brenner light italic;
+    opacity: 1;
+    position: relative;
+    left: 37em;
+    top: -7em;
+
+}
 
 .sound21 #closed-captions:before{
     content: "[Intens threatening music]";
     color: black;
-
-
 }
+*/
 
 
 
@@ -615,18 +637,16 @@ animation-name: fadeInOpacity;
 }
 
 
-.sound19 {
-    background: linear-gradient(135deg, #16728e, #16728e, black, black);
-    background-size: 400% 400%;
-    animation: gradient 5s ease infinite;
-}
-
 /*"dark "dark*/
 .sound21 {
     background: linear-gradient(135deg, black, #16728e, black, black);
     background-size: 200% 200%;
     animation: gradient 4s ease infinite;
 
+}
+
+.sound24 .textSound19 {
+    opacity: 0;
 }
 
 
